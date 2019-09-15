@@ -43,6 +43,10 @@ namespace Angular
                 app.UseHsts();
             }
 
+#if DEBUG
+            throw new System.Exception("Is staging");
+# endif
+
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
